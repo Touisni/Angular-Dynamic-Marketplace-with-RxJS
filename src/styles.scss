@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: Helvetica;
+    margin: 0;
+    background-color: #fdf1ec;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');

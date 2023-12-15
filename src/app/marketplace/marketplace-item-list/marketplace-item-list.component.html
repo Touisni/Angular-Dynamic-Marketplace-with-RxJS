@@ -1,0 +1,21 @@
+<div class="marketplace-list">
+    <div class="single-item" *ngFor="let item of marketplaceItems">
+        <div class="left-set">
+            <img [src]="item.image" [alt]="item.title" />
+        </div>
+        <div class="right-set">
+            <div class="name">{{ item.title | uppercase }}</div>
+            <div class="subname">{{ item.category }}</div>
+            <div class="price">${{ item.price }}</div>
+            <div class="description">
+                <p>
+                    {{ item.description }}
+                </p>
+            </div>
+            <div class="cart">
+                <button class="add_to_cart" *ngIf="!item.isSelected" (click)="addToCart(item)">+ Add to cart</button>
+                <button class="remove_from_cart" *ngIf="item.isSelected" (click)="removeFromCart(item)">- Remove from cart</button>
+            </div>
+        </div>
+    </div>
+</div>

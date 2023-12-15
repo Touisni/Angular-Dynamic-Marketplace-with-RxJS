@@ -1,0 +1,67 @@
+$font-family: 'Rubik', sans-serif;
+
+a {
+  text-decoration: none;
+  color: #000;
+  font-family: $font-family;
+}
+
+.site-header {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  padding: .5em 1em;
+  font-family: $font-family;
+}
+
+.site-header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.site-identity {
+  float: left;
+}
+
+.site-identity h1 {
+  font-size: 1.5em;
+  margin: .7em 0 .3em 0;
+  display: inline-block;
+}
+
+.site-identity img {
+  max-width: 55px;
+  float: left;
+  margin: 0 10px 0 0;
+  border-radius: 50%;
+}
+
+.site-navigation {
+  float: right;
+}
+
+.site-navigation ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+.site-navigation li {
+  display: inline-block;
+  margin: 1.4em 1em 1em 1em;
+}
+
+span.badge {
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-size: 14px;
+
+  &.badge-green {
+    background: #2aa200;
+    color: white;
+  }
+
+  &.badge-yellow {
+    background: #e32525;
+    color: white;
+  }
+}

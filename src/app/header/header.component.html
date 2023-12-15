@@ -1,0 +1,44 @@
+<header class="site-header">
+    <div class="site-identity">
+      <a href="#"><img src="https://via.placeholder.com/200" alt="TP2 : Marketplace" /></a>
+      <h1><a href="#">TP2 : Marketplace</a></h1>
+    </div>
+    <nav class="site-navigation">
+      <ul class="nav">
+        <li><a href="#">Categories</a></li>
+        <li><a href="#">New</a></li>
+        <li><a href="#">About us</a></li>
+        <li>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cartModal">
+            Cart
+            <span class="badge" [ngClass]="{ 'badge-green': cartItems.length > 0, 'badge-yellow': cartItems.length === 0 }">
+              {{ cartItems.length }}
+            </span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cartModalLabel">Your Cart</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li *ngFor="let item of cartItems; let i = index">
+              {{ item.item.title }} - Quantity:
+              <button class="btn btn-secondary" (click)="updateQuantity(item, item.quantity - 1)">-</button>
+              {{ item.quantity }}
+              <button class="btn btn-secondary" (click)="updateQuantity(item, item.quantity + 1)">+</button>
+              <button class="btn btn-danger" (click)="removeItemFromCart(item)">Delete</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  

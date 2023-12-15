@@ -1,0 +1,93 @@
+$font-family: 'Rubik', sans-serif;
+
+@mixin area($width: 1rem, $height: 1rem) {
+  width: $width;
+  height: $height;
+}
+
+.single-item {
+  display: inline-block;
+  @include area(46%, 360px);
+  margin: 10px 2%;
+  border: solid 6px #fff;
+  border-radius: 10px;
+  background: #f5f5f5;
+  box-shadow: 0 30px 20px -20px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  font-family: $font-family;
+
+  .left-set,
+  .right-set {
+    position: relative;
+    width: 50%;
+    height: 100%;
+
+    div.cart {
+      position: absolute;
+      bottom: 25px;
+
+      button {
+        cursor: pointer;
+        border: 0;
+        border-radius: 5px;
+        padding: 10px;
+
+        &.add_to_cart {
+          background: #2aa200;
+          color: white;
+        }
+
+        &.remove_from_cart {
+          background: #e32525;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .left-set {
+    float: left;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @include area(300px, 300px);
+    }
+  }
+
+  .right-set {
+    float: right;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+
+    .name,
+    .subname {
+      font-weight: bold;
+    }
+
+    .name {
+      font-size: 1.4rem;
+      line-height: 2rem;
+    }
+
+    .subname {
+      font-size: 0.8rem;
+      line-height: 1rem;
+    }
+
+    .price {
+      padding: 1rem 0;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .description p {
+      font-size: 0.9rem;
+      text-align: justify;
+      hyphens: auto;
+    }
+  }
+}
