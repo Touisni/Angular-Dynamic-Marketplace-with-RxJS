@@ -19,7 +19,7 @@ This project is a dynamic marketplace application built using Angular and RxJS. 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/angular-dynamic-marketplace.git
+   git clone https://github.com/Touisni/angular-dynamic-marketplace.git
    cd angular-dynamic-marketplace
    ```
 
